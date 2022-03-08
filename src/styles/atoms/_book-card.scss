@@ -1,0 +1,48 @@
+.book-card {
+    height: 100%;
+
+    &--body {
+        display: flex;
+    }
+
+    &--image-container {
+        height: 150px;
+        flex: 1 0;
+        display: flex;
+        align-items: stretch;
+    }
+
+    &--thumbnail {
+        &-empty {
+            width: 100%;
+            background-color: lightgray;
+            border-radius: 0.25rem;
+            border: solid 0.25rem white;
+            outline: 1px solid #dee2e6;
+            max-width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: grey;
+        }
+    }
+
+    &--details {
+        margin-left: 1em;
+        width: 60%;
+        position: relative;
+    }
+
+    &--title {
+        small {
+            font-style: italic;
+            font-size: .7em;
+        }
+    }
+
+    &--publication {
+        margin-top: .5em;
+        font-style: italic;
+        font-size: .7em;
+    }
+}
