@@ -1,7 +1,12 @@
 import { Col, Row } from "react-bootstrap";
+import AutoPagination from "../atoms/AutoPagination";
 import BookCard from "../atoms/BookCard";
 
 const BookList = props => {
+    const handlePageChange = evt => {
+        props.onPageChange(evt)
+    }
+
     const books = props.books.map(book => {
         return <Col key={book.id} className="mb-3">
             <BookCard
@@ -20,6 +25,7 @@ const BookList = props => {
         {props.total > 0 && <Row xs="1" md="2" xl="3">
             {books}
         </Row>}
+        <AutoPagination pageSize={props.pageSize} total={props.total} currentPage={props.currentPage} onChange={handlePageChange} />
     </div>
 }
 
