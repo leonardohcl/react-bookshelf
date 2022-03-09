@@ -22,8 +22,8 @@ const Details = () => {
     return isLoading ?
         <LoadingBlock /> :
         <Container>
-            <Row>
-                <Col md={4} lg={3}>
+            <Row className="align-items-start">
+                <Col md={4} lg={3} className="mb-3">
                     <BookCard
                         id={book.id}
                         images={book.volumeInfo.imageLinks}
