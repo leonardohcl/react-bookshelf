@@ -21,11 +21,13 @@ const BookList = props => {
     });
 
     return <div className="book-list">
-        <p className={`text-${props.total > 0 ? "end" : "center"} text-muted`}>Found {props.total} books</p>
+        <p className={`text-${props.total > 0 ? "end" : "center"} text-muted`}>Found {props.total} books related to "{props.query}"</p>
         {props.total > 0 && <Row xs="1" md="2" xl="3">
             {books}
         </Row>}
-        <AutoPagination pageSize={props.pageSize} total={props.total} currentPage={props.currentPage} onChange={handlePageChange} />
+        <div className="d-flex justify-content-end">
+            <AutoPagination pageSize={props.pageSize} total={props.total} currentPage={props.currentPage} onChange={handlePageChange} />
+        </div>
     </div>
 }
 
