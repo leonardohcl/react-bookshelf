@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 import { get } from "../services/books-service"
 import LoadingBlock from "../atoms/LoadingBlock"
 import BookCard from "../atoms/BookCard"
+import BookDetailsCard from "../molecules/BookDetailsCard"
 
 const Details = () => {
     const [isLoading, setLoading] = useState(true);
@@ -20,7 +21,29 @@ const Details = () => {
 
     return isLoading ?
         <LoadingBlock /> :
-        <Container></Container>
+        <Container>
+            <Row>
+                <Col md={4} lg={3}>
+                    <BookCard
+                        id={book.id}
+                        images={book.volumeInfo.imageLinks}
+                        title={book.volumeInfo.title}
+                        subtitle={book.volumeInfo.subtitle}
+                        authors={book.volumeInfo.authors}
+                        publisher={book.volumeInfo.publisher}
+                        date={book.volumeInfo.publishedDate}
+                        vertical
+                        disableNavigation
+                    />
+                </Col>
+                <Col>
+                    <BookDetailsCard
+                        categories={book.volumeInfo.categories}
+                        description={book.volumeInfo.description}
+                    />
+                </Col>
+            </Row>
+        </Container>
 }
 
 export default Details
