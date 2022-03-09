@@ -1,13 +1,25 @@
 import { faCamera, faSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, Image } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const BookCard = props => {
+    const navigate = useNavigate()
 
     const thumbnail = props.images ? props.images.smallThumbnail || props.images.small : "";
-    const year = props.date && props.date.slice(0,4)
+    const year = props.date && props.date.slice(0, 4)
 
-    return <Card className="book-card">
+    const handleClick = evt => {
+        if (!props.disableNavigation) navigate(`books/${props.id}`)
+    }
+
+    const classes = [
+        "book-card", 
+        !props.disableNavigation && "book-card--clickable",
+        props.vertical && "book-card--vertical"
+    ].filter(x => x)
+
+    return <Card className={classes.join(" ")} onClick={handleClick}>
         <Card.Body className="book-card--body">
             <div className="book-card--image-container">
                 {thumbnail ?

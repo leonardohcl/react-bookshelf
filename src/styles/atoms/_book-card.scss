@@ -1,6 +1,12 @@
 .book-card {
     height: 100%;
 
+    $container: &;
+
+    &--clickable {
+        cursor: pointer;
+    }
+
     &--body {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -62,5 +68,34 @@
         font-size: .7em;
         align-self: end;
         height: 100%;
+    }
+
+    &--vertical {
+        @include screen-above(md) {
+
+            #{$container}--body {
+                grid-template-columns: 1fr;
+            }
+
+            #{$container}--image-container {
+                justify-content: center;
+                padding-bottom: 1rem;
+            }
+
+            #{$container}--thumbnail {
+                &-empty{
+                    min-height: 230px;
+                    max-width: unset;
+
+                    @include screen-above(xl){
+                        max-width: 160px;
+                    }
+                }
+            }
+
+            #{$container}--info {
+                padding: 0 0 1rem;
+            }
+        }
     }
 }
