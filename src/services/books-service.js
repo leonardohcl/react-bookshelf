@@ -16,3 +16,15 @@ export const list = async (query, page = 1, pageSize = 12) => {
 
     return await response.json()
 }
+
+export const get = async (id) => {
+    const params = [
+        `key=${KEY}`
+    ]
+
+    const response = await fetch(`https://www.googleapis.com/books/v1/volumes/${id}?${params.join("&")}`)
+
+    if (!response.ok) throw new Error("Something went wrong")
+
+    return await response.json()
+}

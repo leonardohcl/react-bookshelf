@@ -8,6 +8,7 @@ import './styles/main.scss'
 
 import Navigation from './organisms/Navigation';
 import Home from "./pages/Home"
+import Details from './pages/Details';
 
 
 
@@ -17,6 +18,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/books/:id" element={<Details/>}/>
       </Routes>
     </BrowserRouter>
   </>,
