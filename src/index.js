@@ -13,15 +13,13 @@ import Details from './pages/Details';
 
 
 ReactDOM.render(
-  <>
+  <BrowserRouter>
     <Navigation />
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/books/:id" element={<Details/>}/>
-      </Routes>
-    </BrowserRouter>
-  </>,
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/books/:id" element={<Details/>}/>
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

@@ -1,7 +1,10 @@
 .book-card {
-    height: 100%;
-
     $container: &;
+
+    height: 100%;
+    color: initial;
+    text-decoration: none;
+
 
     &--clickable {
         cursor: pointer;
@@ -83,11 +86,11 @@
             }
 
             #{$container}--thumbnail {
-                &-empty{
+                &-empty {
                     min-height: 230px;
                     max-width: unset;
 
-                    @include screen-above(xl){
+                    @include screen-above(xl) {
                         max-width: 160px;
                     }
                 }
