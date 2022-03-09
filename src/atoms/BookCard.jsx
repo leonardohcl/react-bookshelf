@@ -20,16 +20,15 @@ const BookCard = props => {
                     </div>
                 }
             </div>
-            <div className="book-card--details">
-                <Card.Title className="book-card--title">
-                    {props.title}
-                    {props.subtitle && <small><br/>{props.subtitle}</small>}
-                </Card.Title>
+            <Card.Title className="book-card--info book-card--title">
+                {props.title}
+                {props.subtitle && <small><br />{props.subtitle}</small>}
+            </Card.Title>
+            <div className="book-card--info book-card--authors">
                 {props.authors && <Card.Subtitle className="book-card--authors text-muted">{props.authors.join(", ")}</Card.Subtitle>}
-            
-                <div className="book-card--publication">
-                    {props.publisher} {year && `(${year})`}
-                </div>
+            </div>
+            <div className="book-card--info book-card--publication">
+                {props.publisher} {year && `(${year})`}
             </div>
         </Card.Body>
     </Card>
