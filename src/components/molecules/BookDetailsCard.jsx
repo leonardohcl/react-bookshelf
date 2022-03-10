@@ -9,7 +9,7 @@ const BookDetailsCard = props => {
             </div>}
 
             <div className="book-details-card--description book-details-card--section" dangerouslySetInnerHTML={{
-                __html: sanitize(`<b>About</b>${props.description || "<p class='mb-0'> No description available</p>"}`)
+                __html: sanitize(`<b class="me-2">About</b>${props.description || "<p class='mb-0'> No description available</p>"}`)
             }} />
 
         </Card.Body>

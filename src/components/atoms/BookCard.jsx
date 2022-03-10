@@ -37,7 +37,7 @@ const BookCard = props => {
     ].filter(x => x)
 
     return <Card className={classes.join(" ")} >
-        <Card.Body className="book-card--body" as={props.disableNavigation ? "div" : Link} to={`books/${props.id}`}>
+        <Card.Body className="book-card--body" as={props.disableNavigation ? "div" : Link} to={`/books/${props.id}`}>
             <div className="book-card--image-container">
                 {thumbnail ?
                     <Image src={thumbnail} className="book-card--thumbnail" thumbnail /> :

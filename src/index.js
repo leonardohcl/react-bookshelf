@@ -6,10 +6,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.scss'
 
+import { FavoritesProvider } from './providers/favorites';
 import Navigation from './components/organisms/Navigation';
 import Home from "./pages/Home"
 import Details from './pages/Details';
-import { FavoritesProvider } from './providers/favorites';
+import Favorites from './pages/Favorites';
 
 
 
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/books/:id" element={<Details/>}/>
+        <Route path="/favorites" element={<Favorites/>}/>
       </Routes>
     </FavoritesProvider>
   </BrowserRouter>,
