@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap"
 import { useEffect, useReducer, useState } from "react";
-import { list } from "../services/books-service"
+import { list } from "../../services/books-service"
 
 import SearchForm from "../molecules/SearchForm"
 import BookList from "../molecules/BookList";

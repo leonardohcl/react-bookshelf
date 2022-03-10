@@ -2,9 +2,9 @@ import { useEffect, useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { useParams } from "react-router-dom"
 import { get } from "../services/books-service"
-import LoadingBlock from "../atoms/LoadingBlock"
-import BookCard from "../atoms/BookCard"
-import BookDetailsCard from "../molecules/BookDetailsCard"
+import LoadingBlock from "../components/atoms/LoadingBlock"
+import BookCard from "../components/atoms/BookCard"
+import BookDetailsCard from "../components/molecules/BookDetailsCard"
 
 const Details = () => {
     const [isLoading, setLoading] = useState(true);

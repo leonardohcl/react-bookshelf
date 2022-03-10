@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
-import Navigation from "../organisms/Navigation";
-import SearchCard from "../organisms/SearchCard";
+import SearchCard from "../components/organisms/SearchCard";
 
 function App() {
   return (

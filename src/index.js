@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.scss'
 
-import Navigation from './organisms/Navigation';
+import Navigation from './components/organisms/Navigation';
 import Home from "./pages/Home"
 import Details from './pages/Details';
 
