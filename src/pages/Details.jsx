@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { get } from "../services/books-service"
 import LoadingBlock from "../components/atoms/LoadingBlock"
 import BookCard from "../components/atoms/BookCard"
@@ -11,13 +11,19 @@ const Details = () => {
     const [book, setBook] = useState(null)
 
     const params = useParams()
+    const navigate = useNavigate()
 
     useEffect(() => {
         const load = async () => {
-            setLoading(true)
-            const response = await get(params.id);
-            setBook(response);
-            setLoading(false)
+            try {
+                setLoading(true)
+                const response = await get(params.id);
+                setBook(response);
+                setLoading(false)
+            }
+            catch (err) {
+                navigate("/404")
+            }
         }
         load();
     }, [params.id])
