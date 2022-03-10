@@ -9,16 +9,19 @@ import './styles/main.scss'
 import Navigation from './components/organisms/Navigation';
 import Home from "./pages/Home"
 import Details from './pages/Details';
+import { FavoritesProvider } from './providers/favorites';
 
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Navigation />
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/books/:id" element={<Details/>}/>
-    </Routes>
+    <FavoritesProvider>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/books/:id" element={<Details/>}/>
+      </Routes>
+    </FavoritesProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

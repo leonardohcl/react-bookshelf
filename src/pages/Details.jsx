@@ -12,12 +12,15 @@ const Details = () => {
 
     const params = useParams()
 
-    useEffect(async () => {
-        setLoading(true)
-        const response = await get(params.id);
-        setBook(response);
-        setLoading(false)
-    }, [])
+    useEffect(() => {
+        const load = async () => {
+            setLoading(true)
+            const response = await get(params.id);
+            setBook(response);
+            setLoading(false)
+        }
+        load();
+    }, [params.id])
 
     return isLoading ?
         <LoadingBlock /> :

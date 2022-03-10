@@ -1,11 +1,30 @@
-import { faCamera, faSlash } from "@fortawesome/free-solid-svg-icons";
+import { faCamera, faHeart, faSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Card, Image } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { Button, Card, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { FavoritesContext } from "../../providers/favorites";
 
 const BookCard = props => {
     const thumbnail = props.images ? props.images.smallThumbnail || props.images.thumbnail : "";
     const year = props.date && props.date.slice(0, 4)
+
+    const favorites = useContext(FavoritesContext)
+
+    const isFavorite = favorites.isFavorite(props.id);
+
+    const handleToogleFavorite = evt => {
+        if (isFavorite) favorites.remove(props.id)
+        else favorites.add({
+            id: props.id,
+            images: props.images,
+            title: props.title,
+            subtitle: props.subtitle,
+            authors: props.authors,
+            publisher: props.publisher,
+            date: year
+        })
+    }
 
     const classes = [
         "book-card",
@@ -13,8 +32,8 @@ const BookCard = props => {
         props.vertical && "book-card--vertical"
     ].filter(x => x)
 
-    return <Card className={classes.join(" ")} as={props.disableNavigation ? "div" : Link} to={`books/${props.id}`}>
-        <Card.Body className="book-card--body">
+    return <Card className={classes.join(" ")} >
+        <Card.Body className="book-card--body" as={props.disableNavigation ? "div" : Link} to={`books/${props.id}`}>
             <div className="book-card--image-container">
                 {thumbnail ?
                     <Image src={thumbnail} className="book-card--thumbnail" thumbnail /> :
@@ -37,6 +56,13 @@ const BookCard = props => {
                 {props.publisher} {year && `(${year})`}
             </div>
         </Card.Body>
+        <Card.Footer className="book-card--footer">
+            <Button
+                variant="link"
+                onClick={handleToogleFavorite}>
+                <FontAwesomeIcon icon={faHeart} className={isFavorite ? "text-danger" : "text-muted"} />
+            </Button>
+        </Card.Footer>
     </Card>
 }
 

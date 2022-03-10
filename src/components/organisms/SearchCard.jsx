@@ -16,8 +16,9 @@ const bookListReducer = (state, action) => {
             return { ...state, query: action.value, page: 1 }
         case "loadItems":
             return { ...state, books: action.books, total: action.total }
+        default:
+            return { ...emptyBookList }
     }
-    return { ...emptyBookList }
 }
 
 const SearchCard = () => {

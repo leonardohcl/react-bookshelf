@@ -1,18 +1,19 @@
 .book-card {
     $container: &;
-
     height: 100%;
-    color: initial;
-    text-decoration: none;
 
 
     &--clickable {
-        cursor: pointer;
+        #{$container}--body {
+            cursor: pointer;
+            color: initial;
+            text-decoration: none;
+        }
     }
 
     &--body {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: .5fr 1.5fr;
         grid-template-rows: repeat(4, auto);
         align-items: start;
     }
@@ -71,6 +72,11 @@
         font-size: .7em;
         align-self: end;
         height: 100%;
+    }
+
+    &--footer{
+        background-color: white;
+        text-align: right;        
     }
 
     &--vertical {
