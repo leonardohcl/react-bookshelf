@@ -36,7 +36,12 @@ export const FavoritesProvider = props => {
 
     const getFavoritesPage = (page, pageSize) => {
         const startIndex = (page - 1) * pageSize, endIndex = startIndex + pageSize;
-        return deepCopy(favorites.slice(startIndex, endIndex + 1))
+        return {
+            page,
+            pageSize,
+            total: favorites.length,
+            list: deepCopy(favorites.slice(startIndex, endIndex))
+        }
     }
 
     const isBookFavorite = id => favorites.findIndex(x => x.id === id) >= 0

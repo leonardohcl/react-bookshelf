@@ -34,7 +34,9 @@ const BookList = props => {
                 subtitle={book.volumeInfo.subtitle}
                 authors={book.volumeInfo.authors}
                 publisher={book.volumeInfo.publisher}
-                date={book.volumeInfo.publishedDate} />
+                date={book.volumeInfo.publishedDate}
+                onToggleFavorite={props.handleToggleFavorite}
+            />
         </Col>
     });
 

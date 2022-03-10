@@ -5,21 +5,8 @@ import { list } from "../../services/books-service"
 import SearchForm from "../molecules/SearchForm"
 import BookList from "../molecules/BookList";
 import LoadingBlock from "../atoms/LoadingBlock";
+import { bookListReducer, emptyBookList } from "../../utils/book-list";
 
-const emptyBookList = { books: [], total: 0, query: "", page: 1, pageSize: 12 }
-
-const bookListReducer = (state, action) => {
-    switch (action.type) {
-        case "pageChange":
-            return { ...state, page: action.value }
-        case "queryChange":
-            return { ...state, query: action.value, page: 1 }
-        case "loadItems":
-            return { ...state, books: action.books, total: action.total }
-        default:
-            return { ...emptyBookList }
-    }
-}
 
 const SearchCard = () => {
     const [error, setError] = useState(null);

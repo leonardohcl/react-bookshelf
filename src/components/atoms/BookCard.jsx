@@ -13,17 +13,21 @@ const BookCard = props => {
 
     const isFavorite = favorites.isFavorite(props.id);
 
-    const handleToogleFavorite = evt => {
+    const handleToggleFavorite = evt => {
         if (isFavorite) favorites.remove(props.id)
         else favorites.add({
             id: props.id,
-            images: props.images,
-            title: props.title,
-            subtitle: props.subtitle,
-            authors: props.authors,
-            publisher: props.publisher,
-            date: year
+            volumeInfo: {
+                imageLinks: props.images,
+                title: props.title,
+                subtitle: props.subtitle,
+                authors: props.authors,
+                publisher: props.publisher,
+                date: year
+            }
         })
+
+        if (props.onToggleFavorite) props.onToggleFavorite(props.id)
     }
 
     const classes = [
@@ -59,7 +63,7 @@ const BookCard = props => {
         <Card.Footer className="book-card--footer">
             <Button
                 variant="link"
-                onClick={handleToogleFavorite}>
+                onClick={handleToggleFavorite}>
                 <FontAwesomeIcon icon={faHeart} className={isFavorite ? "text-danger" : "text-muted"} />
             </Button>
         </Card.Footer>
