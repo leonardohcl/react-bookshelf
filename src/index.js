@@ -11,6 +11,7 @@ import Navigation from './components/organisms/Navigation';
 import Home from "./pages/Home"
 import Details from './pages/Details';
 import Favorites from './pages/Favorites';
+import NotFound from './pages/404';
 
 
 
@@ -22,6 +23,7 @@ ReactDOM.render(
         <Route path="/" element={<Home/>}/>
         <Route path="/books/:id" element={<Details/>}/>
         <Route path="/favorites" element={<Favorites/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
     </FavoritesProvider>
   </BrowserRouter>,
