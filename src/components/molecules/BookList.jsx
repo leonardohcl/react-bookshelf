@@ -4,7 +4,25 @@ import BookCard from "../atoms/BookCard";
 
 const BookList = props => {
     const handlePageChange = evt => {
-        props.onPageChange(evt)
+        const nextPageText = evt.target.innerText;
+        let nextPage;
+        if (isNaN(nextPageText)) {
+            if (nextPageText.indexOf("›") >= 0) {
+                nextPage = props.currentPage + 1;
+            }
+            else if (nextPageText.indexOf("»") >= 0) {
+                nextPage = Math.ceil(props.total / props.pageSize);
+            }
+            else if (nextPageText.indexOf("‹") >= 0) {
+                nextPage = props.currentPage - 1;
+            }
+            else {
+                nextPage = 1;
+            }
+        } else {
+            nextPage = nextPageText;
+        }
+        props.onPageChange(+nextPage, evt)
     }
 
     const books = props.books.map(book => {
@@ -21,7 +39,6 @@ const BookList = props => {
     });
 
     return <div className="book-list">
-        <p className={`text-${props.total > 0 ? "end" : "center"} text-muted`}>Found {props.total} books related to "{props.query}"</p>
         {props.total > 0 && <Row xs="1" md="2" xl="3">
             {books}
         </Row>}

@@ -26,25 +26,7 @@ const SearchCard = () => {
     const [bookList, dispatchBookListUpdate] = useReducer(bookListReducer, { ...emptyBookList })
     const [isLoading, setLoading] = useState(false)
 
-    const handlePageChange = evt => {
-        const nextPageText = evt.target.innerText;
-        let nextPage;
-        if (isNaN(nextPageText)) {
-            if (nextPageText.indexOf("›") >= 0) {
-                nextPage = bookList.page + 1;
-            }
-            else if (nextPageText.indexOf("»") >= 0) {
-                nextPage = Math.ceil(bookList.total / bookList.pageSize);
-            }
-            else if (nextPageText.indexOf("‹") >= 0) {
-                nextPage = bookList.page - 1;
-            }
-            else {
-                nextPage = 1;
-            }
-        } else {
-            nextPage = +nextPageText;
-        }
+    const handlePageChange = nextPage => {
         dispatchBookListUpdate({ type: "pageChange", value: nextPage })
     }
 
@@ -83,13 +65,17 @@ const SearchCard = () => {
                 <LoadingBlock /> :
                 error ?
                     <p className="text-center text-danger">Something went wrong while searching for books related to '{bookList.query}'. Please try again.</p> :
-                    bookList.query && <BookList
-                        query={bookList.query}
-                        books={bookList.books}
-                        total={bookList.total}
-                        currentPage={bookList.page}
-                        pageSize={bookList.pageSize}
-                        onPageChange={handlePageChange} />
+                    bookList.query && [
+                        <p key="searchResults" className={`text-${bookList.total > 0 ? "end" : "center"} text-muted`}>
+                            Found {bookList.total} books related to "{bookList.query}"
+                        </p>,
+                        <BookList key="bookList"
+                            books={bookList.books}
+                            total={bookList.total}
+                            currentPage={bookList.page}
+                            pageSize={bookList.pageSize}
+                            onPageChange={handlePageChange} />
+                    ]
             }
         </Card.Body>
     </Card>
