@@ -2,7 +2,7 @@ import { useCallback, useContext, useEffect, useReducer, useState } from "react"
 import { Card } from "react-bootstrap"
 import { FavoritesContext } from "../../providers/favorites"
 import { bookListReducer, emptyBookList } from "../../utils/book-list"
-import BookList from "../molecules/BookList"
+import BookList from "../molecules/BookList/BookList"
 
 
 const FavoritesCard = () => {

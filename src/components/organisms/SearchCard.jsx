@@ -2,8 +2,8 @@ import { Card } from "react-bootstrap"
 import { useEffect, useReducer, useState } from "react";
 import { list } from "../../services/books-service"
 
-import SearchForm from "../molecules/SearchForm"
-import BookList from "../molecules/BookList";
+import SearchForm from "../molecules/SearchForm/SearchForm"
+import BookList from "../molecules/BookList/BookList";
 import LoadingBlock from "../atoms/LoadingBlock/LoadingBlock";
 import { bookListReducer, emptyBookList } from "../../utils/book-list";
 
