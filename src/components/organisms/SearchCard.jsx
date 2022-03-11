@@ -4,7 +4,7 @@ import { list } from "../../services/books-service"
 
 import SearchForm from "../molecules/SearchForm"
 import BookList from "../molecules/BookList";
-import LoadingBlock from "../atoms/LoadingBlock";
+import LoadingBlock from "../atoms/LoadingBlock/LoadingBlock";
 import { bookListReducer, emptyBookList } from "../../utils/book-list";
 
 

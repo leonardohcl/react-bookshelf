@@ -1,6 +1,6 @@
 import { Col, Row } from "react-bootstrap";
-import AutoPagination from "../atoms/AutoPagination";
-import BookCard from "../atoms/BookCard";
+import AutoPagination from "../atoms/AutoPagination/AutoPagination";
+import BookCard from "../atoms/BookCard/BookCard";
 
 const BookList = props => {
     const handlePageChange = evt => {

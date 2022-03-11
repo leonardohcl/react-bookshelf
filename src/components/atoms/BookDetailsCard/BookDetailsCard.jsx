@@ -4,8 +4,8 @@ import { Badge, Card } from "react-bootstrap"
 const BookDetailsCard = props => {
     return <Card className="book-details-card">
         <Card.Body>
-            {props.categories && <div className="book-details-card--genres book-details-card--section">
-                <b>Categories: </b>{props.categories.map((cat, idx) => <Badge key={idx} className='me-1' pill bg="secondary">{cat}</Badge>)}
+            {props.categories && <div className="book-details-card--categories book-details-card--section">
+                <b>Categories: </b>{props.categories.map((cat, idx) => <Badge key={idx} className='book-details-card--category me-1' pill bg="secondary">{cat}</Badge>)}
             </div>}
 
             <div className="book-details-card--description book-details-card--section" dangerouslySetInnerHTML={{

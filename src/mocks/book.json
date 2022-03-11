@@ -1,0 +1,105 @@
+{
+    "kind": "books#volume",
+    "id": "RhqJWjZ_6o4C",
+    "etag": "xIoqCmzfYco",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/RhqJWjZ_6o4C",
+    "volumeInfo": {
+        "title": "O guia do mochileiro das galáxias",
+        "authors": [
+            "Douglas Adams"
+        ],
+        "publisher": "Editora Arqueiro",
+        "publishedDate": "2010-11-09",
+        "description": "\u003cp\u003eConsiderado um dos maiores clássicos da literatura de ficção científica, \u003ci\u003eO Guia do Mochileiro das Galáxias\u003c/i\u003e vem encantando gerações de leitores ao redor do mundo com seu humor afiado.\u003c/p\u003e\u003cp\u003eEste é o primeiro título da famosa série escrita por Douglas Adams, que conta as aventuras espaciais do inglês Arthur Dent e de seu amigo Ford Prefect.\u003c/p\u003e\u003cp\u003eA dupla escapa da destruição da Terra pegando carona numa nave alienígena, graças aos conhecimentos de Prefect, um E.T. que vivia disfarçado de ator desempregado enquanto fazia pesquisa de campo para a nova edição do \u003ci\u003eGuia do Mochileiro das Galáxias,\u003c/i\u003e o melhor guia de viagens interplanetário.\u003c/p\u003e\u003cp\u003eMestre da sátira, Douglas Adams cria personagens inesquecíveis e situações mirabolantes para debochar da burocracia, dos políticos, da \"alta cultura\" e de diversas instituições atuais. Seu livro, que trata em última instância da busca do sentido da vida, não só diverte como também faz pensar.\u003c/p\u003e",
+        "industryIdentifiers": [{
+                "type": "ISBN_10",
+                "identifier": "8599296779"
+            },
+            {
+                "type": "ISBN_13",
+                "identifier": "9788599296776"
+            }
+        ],
+        "readingModes": {
+            "text": true,
+            "image": true
+        },
+        "pageCount": 208,
+        "printedPageCount": 201,
+        "printType": "BOOK",
+        "categories": [
+            "Fiction / Science Fiction / Space Opera",
+            "Fiction / Science Fiction / Humorous",
+            "Fiction / Action & Adventure"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.41.41.0.preview.3",
+        "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+        },
+        "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=RhqJWjZ_6o4C&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73DGFjpvLEazCmiaa8rLbB0-kNC--rnliSVGTAY5UKSHTheBBWVWjsh83aW86pipkqOAMK08XqG8gDauyNkFk2H7f9g98FbbrkqztfrVt8QD5-n0Vv2OGuRYUDXK8um0-qPvsr8&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=RhqJWjZ_6o4C&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70jYBoSVqwx1in11fvJ6YoKF9mNTGb_j1wofBO5JFTPItuja6XVrG1ti6w8UEK1yEgGnvHR6hZ4oaLUjxV2WnwiMNopMmMtSBgoiNN4fixsQcQNvwLqnM6171fTRskOkQ36VLFx&source=gbs_api",
+            "small": "http://books.google.com/books/content?id=RhqJWjZ_6o4C&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71GDJ8wRUI80BDECS1JJvM-yLvKFJ5tN6cH3UAn7dxBP_slCDPGVbX4ndJgopTyXc4IofiB0bJQbc1hwoV7H__Yby6CybGgpMq1mgisMJL2MVi2TPfbk6YjxqjGR3jSoZFKZLzM&source=gbs_api",
+            "medium": "http://books.google.com/books/content?id=RhqJWjZ_6o4C&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE70H6FmXeH08RESdsKZFpoyNeu4rfeWZszuPERzAAG6JWNv287tqTvX4mLHqfnsvn4-Ez-FfdmE6tg1qhf6F2hLe5nwZcsy3RkLuea7puwABVJLHMWoOouEeQuddoWWvDDG3a933&source=gbs_api",
+            "large": "http://books.google.com/books/content?id=RhqJWjZ_6o4C&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE706qGfGASRStnq6QPQ9THq7dFd0SJO_pilhTrFgwLHvBjN6py-uCThXY_jwjc8sGQWWhCIdeAXSVJdFDsmkBO36Oc1cGKdN7CddcFtx84EWQxM845tU9REU7GZ4BA0dopVoukBo&source=gbs_api",
+            "extraLarge": "http://books.google.com/books/content?id=RhqJWjZ_6o4C&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71J0NEzH6IoPhdysnbYo3uLPQKRO-PEk5mNO2rKM0XxqoL3ZQOmvUcXujER_yMZi0Y1IXqlOg3WK403V8BKIvLkQ9ehPUoqKQGjTy9tROqxV9_wRymzwGEhWyCXJkSaQRYnxZ5z&source=gbs_api"
+        },
+        "language": "pt-BR",
+        "previewLink": "http://books.google.com.br/books?id=RhqJWjZ_6o4C&hl=&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=RhqJWjZ_6o4C&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=RhqJWjZ_6o4C"
+    },
+    "layerInfo": {
+        "layers": [{
+            "layerId": "geo",
+            "volumeAnnotationsVersion": "40"
+        }]
+    },
+    "saleInfo": {
+        "country": "BR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+            "amount": 21.99,
+            "currencyCode": "BRL"
+        },
+        "retailPrice": {
+            "amount": 20.89,
+            "currencyCode": "BRL"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=RhqJWjZ_6o4C&rdid=book-RhqJWjZ_6o4C&rdot=1&source=gbs_api",
+        "offers": [{
+            "finskyOfferType": 1,
+            "listPrice": {
+                "amountInMicros": 21990000,
+                "currencyCode": "BRL"
+            },
+            "retailPrice": {
+                "amountInMicros": 20890000,
+                "currencyCode": "BRL"
+            },
+            "giftable": true
+        }]
+    },
+    "accessInfo": {
+        "country": "BR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.br/books/download/O_guia_do_mochileiro_das_gal%C3%A1xias-sample-epub.acsm?id=RhqJWjZ_6o4C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.br/books/download/O_guia_do_mochileiro_das_gal%C3%A1xias-sample-pdf.acsm?id=RhqJWjZ_6o4C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=RhqJWjZ_6o4C&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+    }
+}

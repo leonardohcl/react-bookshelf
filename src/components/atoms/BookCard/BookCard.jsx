@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
 import { Button, Card, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FavoritesContext } from "../../providers/favorites";
+import { FavoritesContext } from "../../../providers/favorites";
 
 const BookCard = props => {
     const thumbnail = props.images ? props.images.smallThumbnail || props.images.thumbnail : "";
@@ -33,7 +33,8 @@ const BookCard = props => {
     const classes = [
         "book-card",
         !props.disableNavigation && "book-card--clickable",
-        props.vertical && "book-card--vertical"
+        props.vertical && "book-card--vertical",
+        isFavorite && "book-card--favorite"
     ].filter(x => x)
 
     return <Card className={classes.join(" ")} >
@@ -63,6 +64,7 @@ const BookCard = props => {
         <Card.Footer className="book-card--footer">
             <Button
                 variant="link"
+                className="book-card--favorite-btn"
                 onClick={handleToggleFavorite}>
                 <FontAwesomeIcon icon={faHeart} className={isFavorite ? "text-danger" : "text-muted"} />
             </Button>
