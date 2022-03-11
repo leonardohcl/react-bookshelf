@@ -45,7 +45,7 @@ const Details = () => {
                         disableNavigation
                     />
                 </Col>
-                <Col>
+                <Col md={8} lg={9}>
                     <BookDetailsCard
                         categories={book.volumeInfo.categories}
                         description={book.volumeInfo.description}
