@@ -14,7 +14,7 @@ test("render correct number of items", () => {
     { currentPage: 1, total: 1, pageSize: 1, expected: 1 },
     { currentPage: 1, total: 2, pageSize: 1, expected: 3 },
     { currentPage: 2, total: 4, pageSize: 1, expected: 6 },
-    { currentPage: 4, total: 4, pageSize: 1, expected: 5 },
+    { currentPage: 4, total: 4, pageSize: 1, expected: 4 },
   ]
 
   const { rerender } = render(<AutoPagination currentPage={1} />)
@@ -32,7 +32,7 @@ test("render correct number of items", () => {
 })
 
 test("render correct page as current", () => {
-  const {container} = render(<AutoPagination currentPage={3} pageSize={1} total={9} />)
+  render(<AutoPagination currentPage={3} pageSize={1} total={9} />)
   const component = screen.getByText("3");
   expect(component).toHaveTextContent("(current)")
 })
